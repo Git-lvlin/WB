@@ -1,0 +1,25 @@
+#footer{
+	width: 100%;
+	background: #f4f4f4;
+	border-top: 1px solid #ccc;
+}
+.footer_banx{
+	width: 1189px;
+	height: 200px;
+	border-bottom: 1px  solid #ccc;
+	margin: 30px auto;
+	display: flex;
+	justify-content: space-around;
+} 
+.footer_banx ul{
+	margin-top: 20px;
+	flex-direction: column;
+	line-height: 22px;
+}
+.footer_banx ul a{
+	color: #666666;
+	font-size: 12px;
+}
+.footer_banx ul a:hover{
+	color:#e1251b;
+}

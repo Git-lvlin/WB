@@ -1,0 +1,44 @@
+@charset "utf-8";
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{
+    font-size:16px;
+    font-family: '微软雅黑';
+    background: #f6f6f6;
+    overflow-x: hidden;
+}
+ul,ol,li{
+    list-style:none;
+}
+h1,h2,h3,h4,h5,h6{
+    font-size:16px;
+    font-weight: normal;
+}
+b,strong{
+    font-weight: normal;
+}
+i,em{
+    font-style: normal;
+}
+a,u{
+    text-decoration: none;
+}
+/* 去掉表单的边框 */
+input,fieldset{
+    outline: none;
+    border:0;
+}
+/* 万能清除浮动 */
+.clear_fix:after{
+    content:'.';
+    clear:both;
+    height:0;
+    overflow:hidden;
+    display:block;
+    visibility: hidden;
+}
+/* 兼容IE */
+.clear_fix{
+    zoom: 1;
+}
+/* 阻止浏览器对多行文本窗口拖动 */
+textarea{resize:none;}

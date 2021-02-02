@@ -1,0 +1,57 @@
+
+#logo{
+	width: 100%;
+	background: #fff;
+}
+.logo_banx{
+	width: 1200px;
+	height: 115px;
+	display: flex;
+	margin: 0 auto;
+}
+/* 万表logo*/
+.logo_banx .logo_link{
+	
+}
+
+/* 搜索栏*/
+.logo_s{
+	width: 392px;
+	height: 42px;
+	display: flex;
+	justify-content: space-around;
+}
+.logo_s form{
+	width: 392px;
+	height: 42px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff;
+	border: 1px solid #dddddd;
+	border-radius: 5px;
+	position: relative;
+}
+.logo_s form a img{
+	position: absolute;
+	right: 20px;
+	top: 11px;
+}
+
+.logo_s input:nth-of-type(1){
+	width: 316px;
+	height: 37px;
+	border: none;
+	padding-left: 10px
+}
+.logo_s input:nth-of-type(2){
+	width: 76px;
+	height: 40px;
+	border: none;
+	background:#d96565 url(../images/京东_24.jpg)no-repeat center;
+	color: #fff;
+}
+.logo_s input:nth-of-type(2):hover{
+	background: #d96565 url(../images/京东_24.jpg)no-repeat center;
+}
+/*logo--结束*/

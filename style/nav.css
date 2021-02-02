@@ -1,0 +1,82 @@
+/* 导航部分 */
+.nav{
+	width: 100%;
+	background: #f4f4f4;
+}
+/* 版心 */
+.nav_bax{
+	width: 1200px;
+	height: 28px;
+	line-height: 28px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+/* 正品保障，免息分期 */
+.nav_bax .to_int a{
+	color: #998c59;
+	font-size: 11px;
+	display: block;
+	height: 28px;
+	line-height: 28px;
+}
+.nav_bax>ul{
+	display: flex;
+}
+.nav_bax>ul>li{
+	margin: 0 10px;
+	font-size: 11px;
+}
+.nav_bax>ul>li span{
+	margin: 0 20px;
+	color: #999;
+}
+.nav_bax>ul>li a{
+	color: #999;
+}
+.nav_bax>ul>li:nth-of-type(2) a{
+	color: #ae0f17;
+}
+
+/* 客服服务下拉列表 */
+.serve{
+	position: relative;
+	padding:0 5px;
+	border: 1px solid transparent;
+	border-bottom: none;
+}
+.serve:hover{
+	background: #fff;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+.wb_down{
+	width: 220px;
+	height: 0;
+	border: 1px solid #ccc;
+	border-top: none;
+	background: #fff;
+	position: absolute;
+	top: 25px;
+	right: -1px;
+	display: none;
+	transition: .5s;
+}
+.wb_down ul{
+	width: 185px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;
+	padding:5px 0 15px 0;
+}
+.wb_down ul li{
+	float: left;
+	margin-left: 25px;
+}
+.wb_down ul li a{
+	color: #666666;
+}
+.wb_down p{
+	text-align: center;
+	color: #999999;
+}

@@ -1,0 +1,48 @@
+#copy{
+	width: 1189px;
+	height: 265px;
+	margin: 0 auto;
+	text-align: center;
+}
+#copy ul{
+	width: 1189px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+}
+#copy ul li a{
+	color: #666666;
+	font-size: 12px;
+}
+#copy ul li a:hover{
+	color:#e1251b ;
+}
+#copy ul li span{
+	margin: 0 10px;
+	color: #ccc;
+}
+.copy_info{
+	line-height: 23px;
+}
+.copy_info p{
+	color: #999999;
+}
+.copy_a{
+	width: 644px;
+	margin: 40px auto;
+}
+.copy_a a{
+	width: 103px;
+	height: 32px;
+	float: left;
+	display: flex;
+	font-size: 10px;
+	color: #666666;
+	margin-left: 1px;
+}
+.copy_a a:hover{
+	color: #e1251b;
+}
+.copy_a p{
+	text-align: left;
+}
