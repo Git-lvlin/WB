@@ -7,17 +7,15 @@
 	width: 1200px;
 	height: 115px;
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	margin: 0 auto;
 }
-/* 万表logo*/
-.logo_banx .logo_link{
-	
-}
-
 /* 搜索栏*/
 .logo_s{
 	width: 392px;
 	height: 42px;
+	margin-right: 130px;
 	display: flex;
 	justify-content: space-around;
 }
@@ -32,10 +30,12 @@
 	border-radius: 5px;
 	position: relative;
 }
-.logo_s form a img{
+.logo_s form span{
 	position: absolute;
-	right: 20px;
-	top: 11px;
+	left: 30px;
+	top: 10px;
+	font-size: 13px;
+	color: #ccc;
 }
 .logo_s i{
 	width: 16px;
@@ -45,7 +45,7 @@
 	background-position: -193px -346px;
 	background-size: 475px;
 }
-.logo_s input:nth-of-type(1){
+.logo_s .logo_txt{
 	width: 316px;
 	height: 37px;
 	border: none;
@@ -53,9 +53,14 @@
 }
 .logo_s input:nth-of-type(2){
 	width: 76px;
-	height: 40px;
+	height: 42px;
 	border: none;
 	color: #fff;
-	background: #d96565;
+	background-image: linear-gradient(-270deg,#da6666 0,#b33636 100%);
+}
+/* 二维码 */
+.logo_banx .head_fr img{
+	width: 115px;
+	height: 115px;
 }
 /*logo--结束*/
