@@ -61,6 +61,7 @@
 	right: -1px;
 	display: none;
 	transition: .5s;
+	z-index: 88;
 }
 .wb_down ul{
 	width: 185px;

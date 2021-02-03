@@ -1,86 +1,7 @@
-#banimg{
-	height: 500px;
-	background: url(../images/JD.webp)no-repeat center;
-}
 #banner{
-	width: 1189px;
+	width: 1200px;
 	margin: 10px auto;
 	display: flex;
-}
-.banner_01{
-	width: 165px;
-	height: 469px;
-	background: url(../images/京东_35.jpg)no-repeat;
-	position: relative;
-}
-.banner_01 img{
-	position: absolute;
-	left: 165px;
-	width: 0;
-}
-.banner_01:hover img{
-	transition: 0.2s;
-	width: 800px;
-	height: 469px;
-	z-index: 999;
-}
-.banner_02{
-	width: 189px;
-	height: 469px;
-	background: #FFFFFF;
-	position: relative;
-}
-.banner_02 ul{
-	flex-direction: column;
-	line-height: 25px;
-	margin-left: 18px;
-	margin-top: 15px;
-}
-.banner_02 .more{
-	width: 1000px;
-	height: 469px;
-	background: #fff;
-	position: absolute;
-	box-shadow: 0 0 5px #ccc;
-	left: 188px;
-	top: 0;
-	display: none;
-	z-index: 999;
-}
-.banner_02 .more ol{
-	display: flex;
-}
-.banner_02 .more ol li a{
-	width: 100px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-	display: block;
-	background: #333;
-	color: #fff;
-	margin: 20px 0 0 20px;
-}
-.banner_02 .more p{
-	margin: 15px 0 15px 15px;
-}
-.banner_02 .more a{
-	display: inline-block;
-	margin: 5px 0 5px 20px;
-	cursor: pointer;
-	color: #333;
-}
-.banner_02 .more p a:hover{
-	color: #e1251b;
-}
-.banner_02 ul li{
-	cursor: pointer;
-}
-.banner_02 ul li a{
-	color: #333333;
-	font-size: 14px;
-}
-.banner_02 ul li a:hover{
-	color: #e1251b;
 }
 /* 轮播图 */
 .banner_03{
@@ -103,7 +24,6 @@
 }
 .banner_03 .wrap .pic img{
 	position: absolute;
-	opacity: 0;
 	z-index: 1;
 }
 .pic img.show{
