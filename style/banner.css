@@ -1,30 +1,31 @@
 #banner{
-	width: 1200px;
-	margin: 10px auto;
-	display: flex;
+	width: 100%;
 }
 /* 轮播图 */
-.banner_03{
-	width: 588px;
-	height: 469px;
+.banner_img{
+	width: 1920px;
+	height: 460px;
+	margin: 0 auto;
 }
-.banner_03 .wrap{
-	width: 588px;
-	height: 469px;
+.banner_img .wrap{
+	width: 1920px;
+	height: 460px;
+	margin: 0 auto;
 	position: relative;
 }
-.banner_03 .wrap ul{
+.banner_img .wrap ul{
 	position: absolute;
+	display: flex;
 	bottom: 19px;
 	left: 30px;
 	z-index: 888;
 }
-.banner_03 .wrap .pic{
+.banner_img .wrap .pic{
 	position: relative;
 }
-.banner_03 .wrap .pic img{
+.banner_img .wrap .pic img{
 	position: absolute;
-	z-index: 1;
+	opacity: 0;
 }
 .pic img.show{
 	z-index: 10;
@@ -42,7 +43,7 @@
 	margin-right:5px; 
 	border: 1px solid transparent;
 }
-.banner_03 .perv,.banner_03 .next{
+.banner_img .perv,.banner_img .next{
 	width: 25px;
 	height: 35px;
 	line-height: 35px;
@@ -68,227 +69,4 @@
 	right:0;
 	border-top-left-radius: 20px;
 	border-bottom-left-radius: 20px;
-}
-/* 折扣轮播 */
-.banner_04{
-	width: 188px;
-	height: 469px;
-	text-align: center;
-	position: relative;
-}
-.bannerbox div{
-	position: absolute;
-	z-index: 1;
-	opacity: 0;
-}
-.bannerbox div.show{
-	z-index: 10;
-  }
-.bannerbox div img{
-	width: 188px;
-	height: 149px;
-	margin: 0 10px 6px 10px;
-}
-.banner_04 .pervs,.banner_04 .nexts{
-	width: 25px;
-	height: 35px;
-	line-height: 35px;
-	text-align: center;
-	color: #fff;
-	background-color: rgba(0, 0, 0,0.3);
-	position: absolute;
-	font-size: 15px;
-	font-weight: bold;
-	cursor: pointer;
-	z-index: 222;
-	display: none;
-}
-/* 上一页按钮 */
-.banner_04 .pervs{
-	top: 50%;
-	left: 10px;
-	border-top-right-radius: 20px;
-	border-bottom-right-radius: 20px;
-}
-/* 下一页按钮 */
-.banner_04 .nexts{
-	top: 50%;
-	right:-10px;
-	border-top-left-radius: 20px;
-	border-bottom-left-radius: 20px;
-	
-}
-.banner_05{
-	width: 183px;
-	height: 450px;
-	padding: 10px;
-	margin-left: 20px;
-	background: #fff;
-}
-.banner_05 .zhuce{
-	border-bottom: 1px solid #eeeeee;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-}
-.banner_05 .zhuce img{
-	float: left;
-	margin-right: 12px;
-}
-.banner_05 .zhuce a{
-	color: #333333;
-}
-.banner_05 .zhuce a:hover{
-	color: #e1251b;
-}
-.banner_05 .zhuce button{
-	width: 70px;
-	height: 25px;
-	border-radius: 20px;
-	border: none;
-	margin-top: 12px;
-}
-.banner_05 .zhuce p{
-	color: #666666;
-	cursor: pointer;
-}
-.banner_05 .zhuce button:nth-child(1){
-	color: #fff;
-	background: #e1251b;
-	cursor: pointer;
-}
-.zhuce button:nth-child(1):hover{
-	background: #b3180f;
-}
-.banner_05 .zhuce button:nth-child(2){
-	color: #e5d790;
-	background: #363634;
-	margin-left: 10px;
-	cursor: pointer;
-}
-.zhuce button:nth-child(2):hover{
-	background: #aa1810;
-}
-.banner_05 .renmen ul{
-	flex-direction: column;
-}
-.banner_05 .renmen  li{
-	width: 183px;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow:ellipsis;
-}
-.banner_05 .renmen  li h2{
-	font-size: 14px;
-	color: #333333;
-	display: inline-block;
-}
-.banner_05 .renmen  li span{
-	color: #e1251b;
-}
-.banner_05 .renmen  li:nth-child(1){
-	line-height: 20px;
-}
-.banner_05 .renmen  li:nth-child(1) a{
-	font-size: 10px;
-	color: #999999;
-	float: right;
-}
-.banner_05 .renmen ul a{
-	font-size: 12px;
-	color: #666666;
-}
-.banner_05 .renmen ul li:hover a{
-	color: #e1251b;
-}
-/* 选项卡切换 */
-.banner_05 .serve{
-	width: 183px;
-	height: 230px;
-	margin-right: 10px;
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	position: relative;
-	overflow: hidden;
-}
-.serve .main{
-	background: #fff;
-	position: absolute;
-	top: 240px;
-	width: 190px;
-	height: 244px;
-	transition: 1s;
-}
-.main .main_top{
-	display: flex;
-	justify-content: space-around;
-}
-.main .main_con{
-	margin-top: 10px;
-}
-.main .main_con span{
-	margin: 20px 20px 0 0;
-}
-.main .main_con input{
-	width: 130px;
-	margin-left: 10px;
-}
-.main .main_con i{
-	font-style: normal;
-	color: #e1251b;
-	font-size: 10px;
-}
-.main .main_con button{
-	display: block;
-	width: 60px;
-    height: 20px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    line-height: 18px;
-    margin-right: 8px;
-    background: rgb(228, 0, 21);
-	border-radius: 10px;
-	border: none;
-	font-size: 10px;
-	margin: 10px 0;
-	cursor: pointer;
-}
-.main .main_con a{
-	color: rgb(84, 118, 219);
-	display: block;
-}
-.main .main_con a:hover{
-	color: #e1251b;
-}
-.main .main_con em{
-	font-style: normal;
-	font-size: 20px;
-	color: #ccc;
-	display: block;
-	text-align: center;
-	padding-top: 10px;
-	cursor: pointer;
-}
-.banner_05 .box1{
-	margin-left: 3px;
-	width: 43px;
-	height: 54px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-.banner_05 .box1:hover span{
-	color: #e1251b;
-}
-.banner_05 .box1 img{
-	width: 24px;
-	height: 24px;
-}
-.banner_05 .box1 img:nth-of-type(2){
-	display: none;
-}
-.banner_05 .box1 span{
-	font-size: 12px;
 }
