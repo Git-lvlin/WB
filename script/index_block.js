@@ -1,7 +1,8 @@
 window.addEventListener('load',function(){
-    var lit=$2('.box_hd ul li');
+    var spa=$2('.index_hed span');
     var box_con=$2('.box_con');
     var par=0;
+    console.log(spa)
     for(let i=0;i<lit.length;i++){
         lit[i].onmouseenter=function(){
             box_con[par].style.display='none';//上次的隐藏

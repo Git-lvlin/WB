@@ -45,11 +45,11 @@
 	border: 1px solid transparent;
 	border-bottom: none;
 }
-.serve:hover{
+/* .serve:hover{
 	background: #fff;
 	border: 1px solid #ccc;
 	border-bottom: none;
-}
+} */
 .wb_down{
 	width: 220px;
 	height: 0;

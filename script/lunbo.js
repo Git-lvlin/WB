@@ -26,7 +26,7 @@ function autoPlay() {
         nexmove()
     }, 2000);
 }
-//下一页
+//移动到下一页
 function nexmove() {
     //上一张图片清除样式
     imgs[per].className = '';
@@ -43,7 +43,7 @@ function nexmove() {
     })
     per = sum;
 }
-//上一页
+//移动到上一页
 function permove() {
     //上一张图片清除样式
     imgs[per].className = "";
@@ -77,7 +77,7 @@ next.onclick = function () {
     autoPlay() // 过两秒播放
 }
 
-//点击切换图片
+//点击页码切换图片
 for (var i = 0; i < lit.length; i++) {
     lit[i].index = i;
     lit[i].onmouseenter = function () {
@@ -99,81 +99,5 @@ for (var i = 0; i < lit.length; i++) {
 
         autoPlay() // 过两秒播放
     }
-}
-
-//折扣轮播
-var banner_04 = $1(".banner_04");
-var boximg = $2('.bannerbox .box');
-var pervs = $1('.banner_04 .pervs');
-var nexts= $1('.banner_04 .nexts');
-var timers;
-var currs = 0; //当前图片索引
-var pers = 0; //上一张图片索引
-
-// 进入页面执行自动播放
-animate(boximg[currs], {
-    'opacity': 1
-}, function () {
-    autoPlays() // 自定播放
-})
-
-// 自动播放
-function autoPlays() {
-    timers = setInterval(function () {
-        nexmoves()
-    }, 3000);
-}
-//下一页
-function nexmoves() {
-    //上一张图片清除样式
-    boximg[pers].className = '';
-    boximg[pers].style.opacity = 0
-    currs++
-    if (currs >= boximg.length) {
-        currs = 0;
-    }
-    boximg[currs].className = "show";
-    animate(boximg[currs], {
-        'opacity': 1
-    })
-    pers = currs;
-}
-//上一页
-function permoves() {
-    //上一张图片清除样式
-    boximg[pers].className = "";
-    boximg[pers].style.opacity = 0
-    currs--
-    if (currs < 0) {
-        currs = boximg.length - 1;
-    }
-    boximg[currs].className = "show";
-    animate(boximg[currs], {
-        'opacity': 1
-    })
-    pers = currs;
-}
-banner_04.onmouseenter = function () {
-    pervs.style.display = "block";
-    nexts.style.display = "block";
-    //上一页按钮
-    pervs.onclick = function () {
-        clearInterval(timers);
-        clearInterval(boximg[currs].timer);
-        permoves()
-        autoPlays() // 过两秒播放
-    }
-    //下一页按钮
-    nexts.onclick = function () {
-        clearInterval(timers);
-        clearInterval(boximg[currs].timer);
-        nexmoves()
-
-        autoPlays() // 过两秒播放
-    }
-}
-banner_04.onmouseleave = function () {
-    pervs.style.display = "none";
-    nexts.style.display = "none";
 }
 })

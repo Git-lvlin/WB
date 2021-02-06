@@ -36,6 +36,13 @@ task('images',async ()=>{
   .pipe(load.connect.reload())
 })
 
+//处理json
+task('json',async ()=>{
+  src('./json/*.json')
+  .pipe(dest('./dist/json'))
+  .pipe(load.connect.reload())
+})
+
 // 启动一个服务，实现自动刷新
 task('reload',async ()=>{
   load.connect.server({
@@ -50,10 +57,11 @@ task('watch',async ()=>{
   watch('./style/*.css',series('style'))
   watch('./script/*.js',series('script'))
   watch('./images/*.*',series('images'))
+  watch('./json/*.json',series('json'))
 })
 
 // 打包（开发环境）
-task('dev',series('delDist','html','style','script','images'))
+task('dev',series('delDist','html','style','script','images','json'))
 
 // 启动项目
 task('start',series('dev','reload','watch'))

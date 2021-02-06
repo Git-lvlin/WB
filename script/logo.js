@@ -3,11 +3,9 @@ window.addEventListener('load',function(){
     var logo_txt=$1('.logo_s .logo_txt');
     var sp=$1('.logo_s span');
     logo_txt.onfocus=function(){
-        // logo_s.removeChild(sp);
         sp.style.zIndex=-10;
     }
     logo_txt.onblur=function(){
-        // logo_s.removeChild(sp);
         sp.style.zIndex=1;
     }
 })

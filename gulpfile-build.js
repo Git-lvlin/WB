@@ -31,6 +31,13 @@ task('script',async ()=>{
   .pipe(dest('./rev/js'))
 })
 
+//处理json
+task('json',async ()=>{
+  src('./json/*.json')
+  .pipe(dest('./dist/json'))
+  .pipe(load.connect.reload())
+})
+
 // 压缩图片
 task('images',async ()=>{
   src('./images/*.*')
@@ -49,4 +56,4 @@ task('html',async ()=>{
 })
 
 // 打包（生产环境）
-task('build',series('delDist','style','script','images','html'))
+task('build',series('delDist','style','script','images','html','json'))
