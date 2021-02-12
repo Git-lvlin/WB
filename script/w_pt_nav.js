@@ -1,11 +1,10 @@
-$(function () {
+window.addEventListener('load',function(){
     var menu_li = $2('.nav_left_menu ul li');
     var col_ul = $1('.brand_list ul');
-    var a = $.ajax({
+    ajax({
         url: '../json/banner.json',
         type: 'get',
         dataType: 'json',
-        cache: false,
         success: function (res) {
             for (let i = 0; i < menu_li.length; i++) {
                 menu_li[i].onmouseenter = function () {
@@ -19,10 +18,10 @@ $(function () {
                                 </a>
                             </li>`
                     }
-                    col_ul.innerHTML = domli;
+                   col_ul.innerHTML = domli
                 }
             }
-            // 图片文字切换
+             // 图片文字切换
             var con_li = $2('.col_1 ul li');
             var con_img = $2('.col_1 img');
             var con_p = $2('.col_1 p');
@@ -36,9 +35,11 @@ $(function () {
                     con_p[i].style.display = 'none'; //文字隐藏
                 }
             }
+           
         }
     })
 
+    
 
 
 })

@@ -1,0 +1,121 @@
+#copy{
+    width: 100%;
+    background: #333;
+}
+#copy .copy_banx{
+    width: 1200px;
+    margin: 0 auto;
+}
+.copy_inst{
+    overflow: hidden;
+    padding: 44px 0 80px;
+}
+.copy_inst .inst_left{
+    width: 149px;
+    height: 132px;
+}
+.copy_inst .inst_left .p1{
+    font-size: 14px;
+    color: #ccaa7a;
+    font-weight: 700;
+    line-height: 19px;
+    margin-bottom: 12px;
+}
+.copy_inst .inst_left .p2{
+    font-size: 24px;
+    line-height: 31px;
+    color: #ccaa7a;
+}
+.copy_inst .inst_left .p3{
+    color: #999;
+    line-height: 16px;
+    font-size: 12px;
+}
+.copy_inst .inst_left a{
+    display: block;
+    width: 132px;
+    height: 36px;
+    line-height: 36px;
+    color: #999;
+    font-weight: 700;
+    text-align: center;
+    border: 1px solid #999;
+    border-radius: 100px;
+    margin-top: 16px;
+}
+.copy_inst .inst_left a:hover{
+    background: #ccaa7a;
+    color:#fff;
+}
+.copy_inst .inst_middle{
+    width: 520px;
+    margin-left: 122px;
+}
+.inst_middle dl{
+    width: 80px;
+    float: left;
+    margin-right: 24px;
+}
+.inst_middle dl dt{
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+.inst_middle dl dd a{
+    display: block;
+    line-height: 28px;
+    color: #999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.copy_inst .copy_ggt{
+    position: relative;
+    width: 113px;
+    height: 130px;
+    margin:-5px 0 0 187px;
+    overflow: hidden;
+}
+.copy_ggt img{
+    max-width: 113px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.copy_wrap{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.copy_wrap .copy_links a{
+    color: #999;
+    margin: 0 10px;
+    line-height: 20px;
+}
+.copy_wrap .copy_links span{
+    color: #999;
+}
+.copy_wrap .wb_corp{
+    margin: 43px 0 40px;
+    color: #999;
+    line-height: 18px;
+}
+.wb_corp p{
+    margin-bottom: 10px;
+}
+.wb_corp p a{
+    color: #666;
+    line-height: 1.5;
+}
+.wb_filing{
+    width: 100%;
+    background-color: #eee;
+    padding: 24px 0 41px;
+    text-align: center;
+}
+.wb_filing a{
+    display: inline-block;
+    margin-right: 12px;
+}

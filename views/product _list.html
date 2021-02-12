@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品列表页</title>
+    <link rel="stylesheet" href="../style/rest.css">
+	<link rel="stylesheet" href="../style/header.css">
+	<link href="../style/index.css" type="text/css" rel="stylesheet">
+    <link href="../style/nav.css" type="text/css" rel="stylesheet">
+    <link href="../style/logo.css" type="text/css" rel="stylesheet">
+	<link rel="stylesheet" href="../style/w_pt_nav.css">
+	<link rel="stylesheet" href="../style/w_main.css">
+</head>
+<body>
+    <!--通用顶部导航-->
+	<div id="head"></div>
+	<!-- W_pt_nav -->
+	<div id="W_pt_nav">
+		<div class="pt_nav_warp">
+			<div class="pt_nav_left">
+				<a href="">全部商品</a>
+				<i class="icon-a-all"></i>
+				<!-- <div class="nav_left_menu">
+					<ul class="list">
+						<li><a href="">顶级品牌</a>/<a href="">百达翡丽</a><a href="">江诗丹顿</a></li>
+						<li><a href="">奢华品牌</a>/<a href="">欧米茄</a>/<a href="">万国</a><a href="">拓天马</a></li>
+						<li><a href="">高级品牌</a>/<a href="">浪琴</a>/<a href="">爱宝时</a><a href="">豪利时</a></li>
+						<li><a href="">轻奢时尚</a>/<a href="">天梭</a>/<a href="">美度</a><a href="">赫柏林</a></li>
+						<li><a href="">年轻潮牌</a>/<a href="">卡西欧</a>/<a href="">迪士尼</a><a href="">漫威</a></li>
+						<li><a href="">智能手表</a>/<a href="">佳明</a>/<a href="">华为</a><a href="">颂拓</a></li>
+						<li><a href="">表带</a>/<a href="">万表定制表带</a>/<a href="">积优</a></li>
+						<li><a href="">维修保养</a>/<a href="">配件更换</a>/<a href="">手表保养</a></li>
+					</ul>
+				</div> -->
+			</div>
+			<ul class="clearfix">
+				<li><a href="">男表</a></li>
+				<li><a href="">女表</a></li>
+				<li class="circle1"><a href="">秒杀</a></li>
+				<li><a href="">手表行情</a></li>
+				<li><a href="">品牌馆</a></li>
+				<li><a href="">体验中心</a></li>
+				<li><a href="">名匠维修</a></li>
+				<li><a href="">认证二手表</a></li>
+				<li><a href="">二手竞拍</a></li>
+				<li class="circle2"><a href="">高价回收</a></li>
+				<li><a href="">手表资讯</a></li>
+			</ul>
+		</div>
+	</div>
+	<!-- 商品列表 -->
+	<div id="W_main">
+		<div class="W_bread">
+			<div class="bread_inner">
+				<div class="bread_left fl">
+					<a href="">首页</a>
+					<a href="">商品中心</a>
+				</div>
+				<div class="hot_keyword fr">
+					<span class="fl">热门搜索：</span>
+					<a href="">现货·最快次日达</a>
+					<a href="">日夜无间</a>
+					<a href="">劳力士</a>
+					<a href="">东方星</a>
+				</div>
+			</div>
+		</div>
+		<div class="W_list_wrap">
+				<!-- 左边导航 -->
+				<div class="list_left_area fl">
+					<!-- 轮播图 -->
+					<div class="list_act">
+						<div class="main">
+							<div class="con1">
+									<img src="../images/list_act-1.jpg" alt="">
+									<img src="../images/list_act-2.jpg" alt="">
+									<img src="../images/list_act-3.jpg" alt="">
+							</div>
+						</div>
+						<div class="pager">
+								<i></i>
+								<i></i>
+								<i></i>
+						</div>
+					</div>
+					<!-- 选项卡切换 -->
+					<div class="friend_comment">
+						<ul>
+							<li>表友晒单</li>
+							<li>表友评论</li>
+						</ul>
+						<div class="moudle_con">
+							<a href="">
+								<img src="" alt="">
+								<p>没使用，赠品有就好！</p>
+							</a>
+							<a href="">
+								<img src="" alt="">
+								<p>带了段时间，走时准确！上手效果不错！</p>
+							</a>
+							<a href="">
+								<img src="" alt="">
+								<p>没使用，赠品有就好！</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<!-- 右边商品列表 -->
+				<div id="list_right_area"></div>
+		</div>
+	</div>
+    <!-- jq -->
+	<script src="../script/jquery-3.5.1/jquery-3.5.1.js"></script>
+	<!-- 封装js -->
+	<script src="../script/utils.js"></script>
+	<!-- 轮播 -->
+	<script src="../script/W_main.js"></script>
+	<!-- 通用头部模块 -->
+	<script type="text/javascript">
+		$('#head').load('header.html');
+	</script>
+</body>
+</html>

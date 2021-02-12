@@ -1,0 +1,74 @@
+#W_main{
+    background: #fff;
+}
+#W_main .W_bread{
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    background: url(../images/W_detail_Bread.png) repeat-x;
+    overflow: hidden;
+    color: #666;
+    margin-bottom: 18px;
+}
+.W_bread .bread_inner{
+    width: 1200px;
+    margin: 0 auto;
+}
+.bread_inner .bread_left a{
+    color: #666;
+    line-height: 1.5;
+}
+.bread_inner .bread_left a:nth-of-type(2)::before{
+    content: ">";
+    font-size: 13px;
+    color: #383737;
+    display: inline-block;
+    font-family: "宋体";
+    margin:0 8px 0 5px;
+}
+.bread_inner .hot_keyword a{
+    float: left;
+    margin: 0 8px;
+    line-height: 36px;
+}
+/* W_bread结束 */
+/* 主要部分开始 */
+.W_list_wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+/* 轮播 */
+.list_act{
+    position: relative;
+}
+.list_act .main{
+    width: 210px;
+    height: 400px;
+    overflow: hidden;
+}
+.list_act .con1{
+    width: 6000px;
+    overflow: hidden;
+}
+.con1 img{
+    width: 210px;
+    height: 400px;
+    float: left;
+}
+.pager{
+    position: absolute;
+    bottom: 10px;
+    left: 35%;
+    overflow: hidden;
+}
+.pager i{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ccc;
+    float: left;
+    margin-left: 10px;
+}
+.pager i.show{
+    background: #cc9952;
+}

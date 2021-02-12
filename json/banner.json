@@ -1,6 +1,6 @@
 [
-[ { "src":"//image8.wbiao.co/mall/ddbf86e451074f95aa2b8f5f4809e11b.jpg", "p":"百达翡丽111"},
-{ "src":"//image8.wbiao.co/mall/42511ec184ef4d7ebe4a48e989dcba3e.jpg","p":"江诗丹顿"},
+[ { "src":"../images/banner-1.jpg", "p":"百达翡丽"},
+{ "src":"../images/banner-2.jpg","p":"江诗丹顿"},
 {"src":"//image8.wbiao.co/mall/c04b2a71cda946a7903ff7eb27eeb508.jpg","p":"积家"},
 {
     "src":"//image8.wbiao.co/mall/45190020f73b467f946f85433c0ccdaf.jpg",
