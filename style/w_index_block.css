@@ -41,8 +41,9 @@
 .index_hed{
     overflow: hidden;
     height: 60px;
-    display: flex;
-    align-items:center;
+    line-height: 60px;
+    /* display: flex;
+    align-items:center; */
 }
 .index_hed h3{
     float: left;
@@ -61,9 +62,8 @@
     line-height: 28px;
     text-align: center;
     border-radius: 2px;
-    margin-right: 8px;
+    margin: 16px 8px 0 20px;
     font-size: 12px;
-    margin-left: 20px;
     position: relative;
 }
 .index_hed span.on{
@@ -83,6 +83,10 @@
 }
 .index_hed span i.bk{
     display: block;
+}
+.index_hed a{
+    float: right;
+    color: #333;
 }
 /* 标题结束 */
 .index_block_02 .index_home{
@@ -250,6 +254,7 @@
     color: #666;
     line-height: 12px;
     margin-bottom: 6px;
+    font-size: 12px;
 }
 .b_txt .sp1{
     color: #cc9952;
@@ -274,5 +279,80 @@
     font-family: DIN-Bold;
     font-weight: 700;
 }
+
+/* 左右切换按钮 */
+.index_block_03{
+    position: relative;
+}
+.index_block_03 .left_btn,.index_block_03 .right_btn{
+    position: absolute;
+    top: 170px;
+    width: 30px;
+    height: 60px;
+    cursor: pointer;
+}
+.index_block_03 .left_btn:hover{
+    background-image: url(../images/d.png);
+    background-position: -262px -184px;
+}
+.index_block_03 .right_btn:hover{
+    background-image: url(../images/d.png);
+    background-position: -342px -184px;
+}
+.index_block_03 .left_btn{
+    left: 0;
+}
+.index_block_03 .right_btn{
+    right: 0;
+}
+.left_btn i,.right_btn i{
+    display: block;
+    background-image: url(../images/d.png);
+    background-size: 475px;
+    width: 30px;
+    height: 60px;
+}
+.left_btn i{
+    background-position: -142px -184px;
+}
+.right_btn i{
+    background-position: -302px -184px;
+}
+/* index_block_03结束 */
+.index_block_04{
+
+}
+.brand_list{
+    width: 1200px;
+    height: 694px;
+}
+.brand_list li{
+    float: left;
+    margin-bottom: 12px;
+}
+.brand_list li:nth-of-type(odd){
+    margin-right: 12px;
+}
+.brand_list li a{
+    width: 594px;
+    height: 260px;
+    display: block;
+    position: relative;
+}
+.brand_list li a .p_img2{
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    opacity: 0;
+    transition: .5s;
+}
+.brand_list li a:hover .p_img1{
+    filter: blur(4px);
+}
+.brand_list li a:hover .p_img2{
+    opacity: 1;
+}
+/* 品牌logo */
+
 
 
