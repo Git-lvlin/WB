@@ -18,3 +18,16 @@
 a{
 	color: #666666;
 }
+/* 通用超出文字显示省略号 */
+.elps1{
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.elps2{
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	word-break: break-all;
+	display: -webkit-box;
+}

@@ -1,0 +1,275 @@
+#W_top_banner{
+    width: 100%;
+    background-color: #FE4526;
+    height: 60px;
+    text-align: center;
+}
+.order_head_right{
+    margin-top: 35px;
+    margin-right: 40px;
+}
+.order_head_right ul{
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+.order_head_right ul li{
+    position: relative;
+    width: 156px;
+    display: block;
+    float: left;
+    color: #999;
+    text-align: center;
+    margin-top: 5px;
+}
+.order_head_right ul li.on{
+    color: #cc5252;
+}
+.order_head_right ul li.on i{
+    width: 16px;
+    height: 16px;
+    margin-top: -24px;
+    background: #cc5252;
+}
+.order_head_right ul li i{
+    position: absolute;
+    display: inline-block;
+    margin-left: -4px;
+    border-radius: 50%;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    margin-top: -21px;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+.order_head_right ul li span{
+    display: block;
+}
+/* 购物车 */
+#W-main{
+    width: 100%;
+    min-width: 990px;
+    background: #fff;
+    overflow: hidden;
+}
+.W-cart{
+    position: relative;
+    width: 990px;
+    margin: 20px auto 0;
+    padding-bottom: 180px;
+}
+.W-cart h2{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+}
+.W-cart .cart_nav{
+    height: 34px;
+    line-height: 34px;
+    background: #f5f5f5;
+    color: #666;
+    margin-bottom: 20px;
+}
+.cart_nav .cart_nav_l{
+    padding-left: 10px;
+    line-height: 32px;
+}
+.cart_nav_l label{
+    margin-left: 10px;
+}
+.cart_nav_l span{
+    display: inline-block;
+    margin-left: 100px;
+}
+.cart_nav_r{
+    padding-right: 50px;
+}
+.cart_nav_r ul li{
+    float: left;
+    margin-left: 100px;
+}
+/* 加入的商品 */
+.W_store_floor {
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.store_top{
+    padding-left: 10px;
+    position: relative;
+    height: 44px;
+    line-height: 44px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+.store_top label{
+    color: #666;
+    font-weight: 700;
+    margin-left: 10px;
+}
+.store_top span{
+    float: right;
+    width: 50px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 35px;
+    margin-top: 12px;
+    border: 1px solid #cc5252;
+    border-radius: 100px;
+    color: #cc5252;
+    cursor: pointer;
+}
+.goods_floor{
+    display: flex;
+    align-items: center;
+}
+.goods_floor>input{
+    margin-left: 10px;
+}
+.goods_info{
+    margin-left: 20px;
+}
+.goods_info .act_link{
+    display: block;
+    display: flex;
+    align-items: center;
+    width: 940px;
+    height: 36px;
+    line-height: 36px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.act_link span{
+    background: #cc5252;
+    border-radius: 100px;
+    color: #fff;
+    width: 40px;
+    height: 16px;
+    display: block;
+    text-align: center;
+    line-height: 14px;
+}
+.act_link p{
+    margin-left: 15px;
+}
+.goods_txt{
+    width: 250px;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.goods_txt .p1{
+    width: 250px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #666;
+}
+.goods_txt .p2{
+    color: #999;
+}
+.goods_info ul{
+    margin-top: 30px;
+}
+.goods_info ul li{
+    float: left;
+}
+.goods_info ul .unit_price{
+    display: block;
+    width: 120px;
+    color: #666;
+    text-align: center;
+    margin-right: 20px;
+}
+.goods_info ul .goods_num{
+    display: flex;
+    margin-right: 20px;
+}
+.goods_info ul .goods_num button{
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.goods_info ul .goods_num input{
+    width: 42px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+.goods_info ul .total_price{
+    display: block;
+    float: left;
+    width: 120px;
+    color: #666;
+    text-align: center;
+    margin-right:40px;
+}
+.goods_info ul .others{
+    margin-right: 30px;
+}
+.goods_info ul .others a{
+    display: block;
+}
+/* 结算  */
+.W_settle_floor{
+    position: absolute;
+    bottom: 100px;
+    width: 990px;
+    height: 60px;
+    line-height: 60px;
+    background: #f2f2f2;
+}
+.W_settle_floor ul{
+    overflow: hidden;
+}
+.W_settle_floor ul li{
+    float: left;
+    color: #666;
+}
+.W_settle_floor ul .select_tik input{
+    margin-left: 15px;
+}
+.W_settle_floor ul .select_tik label{
+    margin-left: 15px;
+}
+.W_settle_floor ul .delete_goods{
+    margin-left: 28px;
+}
+.W_settle_floor ul .move_in_collect{
+    margin-left: 28px;
+}
+.W_settle_floor ul .clear_fail_goods{
+    margin-left: 28px;
+}
+.W_settle_floor ul .choose_num{
+    margin-left: 238px;
+}
+.W_settle_floor ul .choose_num em{
+    color: #cc5252;
+}
+.W_settle_floor ul .settle_price{
+    height: 60px;
+    margin-left: 128px;
+    display: flex;
+    flex-direction: column;
+}
+.W_settle_floor ul .settle_price i{
+    color: #cc5252;
+    font-size: 14px;
+    font-weight: 700;
+}
+.W_settle_floor ul .settle_btn{
+    width: 150px;
+    background: #cc5252;
+    font-weight: 700;
+    margin-left: 22px;
+    text-align: center;
+    font-size: 14px;
+}
+.W_settle_floor ul .settle_btn a{
+    display: block;
+    color: #fff;
+    font-size: 14px;
+}

@@ -1,0 +1,48 @@
+#pt-shop_nav{
+    width: 100%;
+    height: 44px;
+    background-color: #002947;
+}
+#pt-shop_nav ul{
+     width: 1200px;
+     margin: 0 auto;
+
+}
+#pt-shop_nav ul li{
+    display: block;
+    float: left;
+    margin-left: 50px;
+    text-align: center;
+}
+#pt-shop_nav ul li a{
+    display: inline-block;
+    line-height: 41px;
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 400;
+}
+#pt-shop_nav li a.on{
+    font-weight: 700;
+    border-bottom: 3px solid #fff;
+}
+#pt-shop_nav .consult{
+    float: right;
+    display: block;
+    width: 117px;
+    height: 44px;
+    line-height: 44px;
+    background-color: rgba(51,51,51,.6);
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.consult .icon-d-kefu{
+    margin: 15px 10px 9px 17px;
+    display: block;
+    background-image: url(../images/d.png);
+    background-position: -111px -346px;
+    background-size: 475px;
+    width: 18px;
+    height: 17px;
+}

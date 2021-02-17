@@ -49,6 +49,7 @@
 }
 .copy_inst .inst_middle{
     width: 520px;
+    overflow: hidden;
     margin-left: 122px;
 }
 .inst_middle dl{

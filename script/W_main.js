@@ -60,4 +60,68 @@ for (var i = 0, len = nums.length; i < len; i++){
     pageIndex = this.index
     }
   }
+
+
+
+
+
+  //选项卡切换
+  var Li=$2('.friend_comment ul li');
+  var moudle_con=$2('.moudle_con');
+  var par=0;
+  for (let i = 0; i < Li.length; i++) {
+    Li[i].onmouseenter=function(){
+        Li[par].className='';
+        Li[i].className='tab_in';
+        moudle_con[par].style.display='none';
+        moudle_con[i].style.display='block';
+        par=i;
+    }
+  }
+
+  //商品列表渲染
+  var sh_list=$1('.sh_list ul');
+  ajax({
+      url:'../json/s_goods_list.json',
+      type:'get',
+      dataType:'json',
+      success:function(json){
+          var s_list='';
+          json.forEach(function(item,index){
+              s_list+=`<li>
+                        <a href="" class="s_go_img">
+                            <img src="${item.src}" alt="">
+                        </a>
+                        <div class="goods_txt">
+                            <p class="tPrc">
+                                <em>月付</em>
+                                <span class="fenqi_price">${item.fenqi_price}</span>
+                                <span class="s_price">${item.s_price}</span>
+                            </p>
+                            <a href="" class="s_go_name elps2">
+                            ${item.s_go_name}
+                            </a>
+                            <div class="goods_sale">
+                                <span>${item.sale_tips}</span>/
+                                <em>${item.s_sale_num}</em>
+                            </div>
+                            <a href="" class="s_shop">
+                                ${item.s_shop}
+                            </a>
+                            <p class="sale_tags">
+                                免息分期
+                            </p>
+                            <div class="goods_hover">
+                                <a href="" class="add_to_keep">加入收藏</a>
+                                <a href="" class="add_to_cart">加入购物车</a>
+                            </div>
+                        </div>
+                    </li>`
+          });
+          sh_list.innerHTML=s_list;
+      }
+  })
+ 
 })
+
+

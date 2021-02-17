@@ -36,6 +36,11 @@
 .W_list_wrap{
     width: 1200px;
     margin: 0 auto;
+    overflow: hidden; 
+}
+/* 左边导航 */
+.list_left_area{
+    width: 210px;
 }
 /* 轮播 */
 .list_act{
@@ -72,3 +77,230 @@
 .pager i.show{
     background: #cc9952;
 }
+/* 表友选项卡切换 */
+.friend_comment{
+    margin-top: 40px;
+    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+}
+.friend_comment ul{
+    background-color: #f1f1f1;
+    display: flex;
+}
+.friend_comment ul li{
+    flex: 1;
+    display: inline-block;
+    cursor: pointer;
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+}
+.friend_comment ul li.tab_in{
+    color: #666;
+    font-weight: 700;
+}
+.moudle_con{
+    width: 100%;
+    padding-top: 0;
+    position: absolute;
+    height: 308px;
+    overflow: hidden;
+    background-color: #fff;
+    display: none;
+}
+.moudle_con.show{
+    display: block;
+}
+.moudle_con>a{
+    display: block;
+    padding: 10px 20px;
+    margin-top: 40px;
+}
+.moudle_con img{
+    display: block;
+}
+.moudle_con p{
+    width: 104px;
+    float: right;
+}
+/* 右边内容 */
+.list_right_area{
+    width: 970px;
+    overflow: hidden;
+}
+/* 商品分类 */
+.sh_sis{
+    margin-bottom: 39px;
+    overflow: hidden;
+}
+.sh_sis ul{
+    width: 990px;
+}
+.sh_sis ul li{
+    width: 105px;
+    height: 114px;
+    margin-left: 13px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    cursor: pointer;
+    padding-top: 15px;
+    float: left;
+}
+.sh_sis ul li img{
+    width: 72px;
+    display: block;
+    margin: 0 auto;
+}
+.sh_sis ul li p{
+    width: 48px;
+    height: 26px;
+    line-height: 26px;
+    color: #666;
+    font-size: 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+/* 商品导航 */
+.sh_sort{
+    overflow: hidden;
+    margin-bottom: 32px;
+    border-bottom: 1px solid #eee;
+}
+.sh_sort ul li{
+    float: left;
+    text-align: center;
+    width: 80px;
+    height: 35px;
+}
+.sh_sort ul li a{
+    display: inline-block;
+    height: 33px;
+    line-height: 33px;
+    font-weight: 700;
+    color: #666666;
+}
+.sh_sort ul li a.active{
+    color: #cc9952;
+    border-bottom: 2px solid #cc9952;
+}
+/* 商品列表 */
+.sh_list ul{
+    width: 990px;
+}
+.sh_list li{
+    position: relative;
+    width: 236px;
+    height: 450px;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin: 10px 8.6px 10px 2px;
+}
+.sh_list li:hover{
+    box-shadow: 1px 1px 8px 1px rgba(0,0,0,.2);
+}
+.sh_list li:hover .goods_hover{
+    display: block;
+}
+.sh_list .s_go_img{
+    display: block;
+    overflow: hidden;
+    width: 220px;
+    height: 275px;
+    margin: 10px auto 5px auto;
+    position: relative;
+    text-align: center;
+}
+.s_go_img img{
+    width: auto;
+    height: 275px;
+    position: absolute;
+    left: 50%;
+    margin-left: -137.5px;
+    background-color: #fff;
+}
+.goods_txt{
+    margin: 0 16px;
+    padding-bottom: 20px;
+    line-height: 18px;
+}
+.goods_txt .tPrc{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.tPrc em{
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    padding: 0 2px;
+    background: linear-gradient(270deg,#ff8080 0,#e65c5c 100%);
+    border-radius: 2px;
+    color: #fff;
+}
+.tPrc .fenqi_price{
+    margin-right: 10px;
+    color: #e65c5c;
+    font-size: 16px;
+    font-family: DIN-Bold;
+}
+.tPrc .s_price{
+    position: relative;
+    color: #666;
+    font-size: 16px;
+    font-family: DIN-Bold;
+    font-weight: 400;
+}
+.s_go_name{
+    height: 36px;
+    line-height: 18px;
+    margin-bottom: 8px;
+    color: #666;
+    overflow: hidden;
+}
+.goods_sale{
+    margin-bottom: 4px;
+    color: #999;
+}
+.goods_sale span{
+    color: #cc5252;
+    margin-bottom: 8px;
+}
+.s_shop{
+    color: #999;
+    display: block;
+    margin-bottom: 7px;
+}
+.sale_tags{
+    background: 0 0;
+    border: 1px solid #cc9952;
+    color: #cc9952;
+    display: inline-block;
+    line-height: 16px;
+    padding: 0 7px;
+    border-radius: 2px;
+}
+.goods_hover{
+    position: absolute;
+    bottom: 10px;
+    width: 204px;
+    display: none;
+    background: #fff;
+}
+.goods_hover a{
+    display: block;
+    float: left;
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    width: 50%;
+    text-align: center;
+    line-height: 28px;
+    color: #333;
+}
+.goods_hover a:nth-of-type(2){
+    color: #cc5252;
+    margin-left: -1px;
+}
+

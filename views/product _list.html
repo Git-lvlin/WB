@@ -88,29 +88,89 @@
 					<!-- 选项卡切换 -->
 					<div class="friend_comment">
 						<ul>
-							<li>表友晒单</li>
+							<li class="tab_in">表友晒单</li>
 							<li>表友评论</li>
 						</ul>
-						<div class="moudle_con">
+						<div class="moudle_con show">
 							<a href="">
-								<img src="" alt="">
+								<img src="../images/moudle_con-1.jpg" alt="">
 								<p>没使用，赠品有就好！</p>
 							</a>
 							<a href="">
-								<img src="" alt="">
+								<img src="../images/moudle_con-2.jpg" alt="">
 								<p>带了段时间，走时准确！上手效果不错！</p>
 							</a>
+						</div>
+						<div class="moudle_con">
 							<a href="">
-								<img src="" alt="">
-								<p>没使用，赠品有就好！</p>
+								<img src="../images/moudle_con-3.jpg" alt="">
+								<p>w****4：手表很好，物美价廉，家人很喜欢</p>
+							</a>
+							<a href="">
+								<img src="../images/moudle_con-4.jpg" alt="">
+								<p>w****8：挺好，很重，包装也很精美。</p>
 							</a>
 						</div>
 					</div>
+					<!-- 选项卡切换 结束-->
 				</div>
 				<!-- 右边商品列表 -->
-				<div id="list_right_area"></div>
+				<div class="list_right_area fr">
+					<!-- 商品分类 -->
+					<div class="sh_sis">
+						<ul>
+							<li>
+								<img src="../images/share-1.jpg" alt="">
+								<p class="elps1">复杂功能计时腕表</p>
+							</li>
+							<li>
+								<img src="../images/share-2.jpg" alt="">
+								<p>古典表</p>
+							</li>
+							<li>
+								<img src="../images/share-3.jpg" alt="">
+								<p>运动优雅</p>
+							</li>
+							<li>
+								<img src="../images/share-4.jpg" alt="">
+								<p>其它</p>
+							</li>
+							<li>
+								<img src="../images/share-5.jpg" alt="">
+								<p>Aquanaut</p>
+							</li>
+							<li>
+								<img src="../images/share-6.jpg" alt="">
+								<p>Twenty</p>
+							</li>
+							<li>
+								<img src="../images/share-7.jpg" alt="">
+								<p>Nautilus</p>
+							</li>
+							<li>
+								<img src="../images/share-8.png" alt="">
+								<p>其他</p>
+							</li>
+						</ul>
+					</div>
+					<!-- 商品导航 -->
+					<div class="sh_sort">
+						<ul class="fl">
+							<li><a href="" class="active">综合排序</a></li>
+							<li><a href="">最热优先</a></li>
+							<li><a href="">价格排序</a></li>
+							<li><a href="">折扣</a></li>
+						</ul>
+					</div>
+					<!-- 商品列表 -->
+					<div class="sh_list">
+						<ul></ul>
+					</div>
+				</div>
 		</div>
 	</div>
+	<!--通用底部-->
+	<div id="footer"></div>
     <!-- jq -->
 	<script src="../script/jquery-3.5.1/jquery-3.5.1.js"></script>
 	<!-- 封装js -->
@@ -120,6 +180,10 @@
 	<!-- 通用头部模块 -->
 	<script type="text/javascript">
 		$('#head').load('header.html');
+	</script>
+	<!-- 通用底部模块 -->
+	<script type="text/javascript">
+		$('#footer').load('footer.html');
 	</script>
 </body>
 </html>
