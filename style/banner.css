@@ -11,11 +11,6 @@
 	width: 1920px;
 	height: 460px;
 	margin: 0 auto;
-}
-.banner_img .wrap .ban_btn{
-	width: 1200px;
-	height: 460px;
-	margin: 0 auto;
 	position: relative;
 }
 .banner_img .wrap ul{
@@ -48,7 +43,13 @@
 	margin-right:5px; 
 	border: 1px solid transparent;
 }
-.banner_img .perv,.banner_img .next{
+.banner_img .wrap .ban_btn{
+	width: 900px;
+	height: 460px;
+	left:600px;
+	position: absolute;
+}
+.ban_btn .perv,.ban_btn .next{
 	width: 36px;
 	height: 60px;
 	line-height: 60px;
@@ -62,16 +63,17 @@
 	cursor: pointer;
 	z-index:20;
 }
+
 /* 上一页按钮 */
-.wrap .perv{
+.ban_btn .perv{
 	top: 50%;
-	left: 150px;
+	/* left: 150px; */
 	border-top-right-radius: 5px;
 	border-bottom-right-radius: 5px;
 	background-position: -234px -114px;
 }
 /* 下一页按钮 */
-.wrap .next{
+.ban_btn .next{
 	top: 50%;
 	right:0;
 	border-top-left-radius: 5px;

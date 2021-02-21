@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-    var Li=$2('#pt-shop_nav li');
+    var Li=document.querySelectorAll('#pt-shop_nav li');
     var par=0;
     for (let i = 0; i < Li.length; i++) {
         Li[i].onmouseenter=function(){

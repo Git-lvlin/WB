@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+	<title>Document</title>
+	<link rel="stylesheet" href="../style/rest.css">
+	<link rel="stylesheet" href="../style/header.css">
+	<link href="../style/nav.css" type="text/css" rel="stylesheet">
+	<link href="../style/logo.css" type="text/css" rel="stylesheet">
 </head>
 <body>
     <!-- 头部 -->
@@ -20,10 +24,12 @@
 				<a href="">正品保障，免息分期！</a>
 			</div>
 			<ul>
-				<li><a href="">请登录</a></li>
-				<li><a href="">注册即送3500元大礼包</a></li>
-				<li><span>|</span><a href="">购物车</a></li>
-				<li class="serve"><a href="">客户服务</a>
+				<li>
+					<a href="../views/login.html" class="btn-login">请登录</a>
+				</li>
+				<li><a href="../views/register.html">注册即送3500元大礼包</a></li>
+				<li><span>|</span><a href="" class="spc">购物车</a></li>
+				<li class="serve"><a href="" class="mobile">客户服务</a>
 					<div class="wb_down">
 						<ul>
 							<li><a href="">客户顾问</a></li>
@@ -40,36 +46,9 @@
 			</ul>
 		</div>
 	</div>
-	<!-- logo -->
-	<div id="logo">
-			<div class="logo_banx" id="box">
-				<!-- logo -->
-				<div class="logo_link">
-					<a href="">
-						<img src="../images/logo-icon.png" alt="">
-					</a>
-					<a href="">
-						<img src="../images/slogan-02242018.png" alt="">
-					</a>
-				</div>
-				<!-- 搜索栏 -->
-				<div class="logo_s">
-					<form action="">
-						<i></i>
-						<span>现货·最快次日达</span>
-						<input type="text" class="logo_txt">
-						<input type="submit" name="" id="" value="搜索">
-					</form>
-				</div>
-				<!-- 二维码 -->
-				<a href="" class="head_fr">
-					<img src="../images/head_ads fr.png" alt="">
-				</a>
-		</div>
-	</div>
 	<!-- navjs -->
 	<script src="../script/nav.js"></script>
-	<!-- logo -->
-	<script src="../script/logo.js"></script>
+	<!-- header -->
+	<script src="../script/header.js"></script>
 </body>
 </html>

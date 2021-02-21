@@ -37,6 +37,9 @@
 .nav_bax>ul>li:nth-of-type(2) a{
 	color: #ae0f17;
 }
+.nav_bax>ul>li .btn-login em i{
+	margin-right: 10px;
+}
 
 /* 客服服务下拉列表 */
 .serve{

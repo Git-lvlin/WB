@@ -5,55 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>商品详情页</title>
-    <link rel="stylesheet" href="../style/rest.css">
-    <link rel="stylesheet" href="../style/header.css">
     <link rel="stylesheet" href="../style/Product _Details.css">
-	<link href="../style/index.css" type="text/css" rel="stylesheet">
-    <link href="../style/nav.css" type="text/css" rel="stylesheet">
-    <link href="../style/logo.css" type="text/css" rel="stylesheet">
     <link rel="stylesheet" href="../style/pt-shop_nav.css">
     <link rel="stylesheet" href="../style/W_main2.css">
 </head>
 <body>
-     <!-- 头部 -->
-	<div id="header">
-            <div class="W_head">
-                <a href="//www.wbiao.cn/dynamic/21012982929/"><img src="../images/head.jpg" alt=""></a>
-            </div>
-        </div>
-    <!-- 导航部分 -->
-    <div id="nav">
-        <div class="nav_bax">
-            <div class="to_int">
-                <a href="">正品保障，免息分期！</a>
-            </div>
-            <ul>
-                <li><a href="">请登录</a></li>
-                <li><a href="">注册即送3500元大礼包</a></li>
-                <li><span>|</span><a href="">购物车</a></li>
-                <li class="serve"><a href="">客户服务</a>
-                    <div class="wb_down">
-                        <ul>
-                            <li><a href="">客户顾问</a></li>
-                            <li><a href="">售后维修</a></li>
-                            <li><a href="">帮助中心</a></li>
-                            <li><a href="">办理信用卡</a></li>
-                        </ul>
-                        <p>服务专线：400-883-2688</p>
-                        <p>外呼号码：020-83931899</p>
-                    </div>
-                </li>
-                <li><a href="">会员福利</a></li>
-                <li><span>|</span><a href="">ENGLISH</a></li>
-            </ul>
-        </div>
-    </div>
+    <!--通用顶部导航-->
+	<div id="head"></div>
     <!-- logo -->
 	<div id="logo">
 			<div class="logo_banx" id="box">
 				<!-- logo -->
 				<div class="logo_link">
-					<a href="">
+					<a href="../views/index.html">
 						<img src="../images/logo-icon.png" alt="">
 					</a>
 					<a href="">
@@ -117,22 +81,6 @@
     <div id="W_main2">
         <div class="W_detail">
             <div class="upper_left fl">
-                <div class="left">
-                    <img src="../images/min1.jpg" alt="">
-                    <div class="mask"></div>
-                </div>
-                <div class="maxBox">
-                    <img src="../images/max1.jpg" alt="">
-                </div>
-                <div class="minlist">
-                    <ul class="list">
-                            <li><img src="../images/min1.jpg" alt=""></li>
-                            <li><img src="../images/min2.jpg" alt=""></li>
-                            <li><img src="../images/min3.jpg" alt=""></li>
-                            <li><img src="../images/min4.jpg" alt=""></li>
-                            <li><img src="../images/min5.jpg" alt=""></li>
-                    </ul>
-                </div>
             </div>
             <div class="upper_right fl">
                 <!-- 商品名称 -->
@@ -220,15 +168,19 @@
     <!--通用底部-->
     <div id="footer"></div>
      <!-- jq -->
-	<script src="../script/jquery-3.5.1/jquery-3.5.1.js"></script>
-	<!-- 封装js -->
-    <script src="../script/utils.js"></script>
+    <script src="../script/jquery-3.5.1/jquery-3.5.1.js"></script>
+    <!-- 封装js -->
+	<script src="../script/utils.js"></script>
     <!-- logo -->
     <script src="../script/logo.js"></script>
     <!-- pt-shop_nav -->
     <script src="../script/pt-shop_nav.js"></script>
     <!-- 放大镜 -->
     <script src="../script/W_main2.js"></script>
+    <!-- 通用头部模块 -->
+	<script type="text/javascript">
+		$('#head').load('header.html');
+	</script>
 	<!-- 通用底部模块 -->
 	<script type="text/javascript">
 		$('#footer').load('footer.html');

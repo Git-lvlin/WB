@@ -88,8 +88,8 @@ for (var i = 0, len = nums.length; i < len; i++){
       success:function(json){
           var s_list='';
           json.forEach(function(item,index){
-              s_list+=`<li>
-                        <a href="" class="s_go_img">
+              s_list+=`<li class="goods">
+                        <a href="../views/Product _Details.html" class="s_go_img" data-id="${item.id}">
                             <img src="${item.src}" alt="">
                         </a>
                         <div class="goods_txt">
@@ -113,14 +113,57 @@ for (var i = 0, len = nums.length; i < len; i++){
                             </p>
                             <div class="goods_hover">
                                 <a href="" class="add_to_keep">加入收藏</a>
-                                <a href="" class="add_to_cart">加入购物车</a>
+                                <a href="" class="add_to_cart" data-id="${item.id}">加入购物车</a>
                             </div>
                         </div>
                     </li>`
           });
           sh_list.innerHTML=s_list;
+
       }
   })
+    // 点击存储商品id
+    $('.sh_list').on('click','.goods>a',function (){
+        // 存储商品id
+        // "goods"=>"[{'id':'tm1'},{'id':'tm2'}]"
+        var id = $(this).attr('data-id')//当前点击商品的id
+        var goodsArr = []//购物车数据的数组
+          // push一个商品对象的id到goodsArr
+          goodsArr.push({"id":id})
+
+        // 数据更新到本地存储
+        localStorage.setItem('goods', JSON.stringify(goodsArr) )
+        // alert('保存id成功！')
+      })
+
+    // 点击加入购物车
+    $('.sh_list').on('click','.add_to_cart',function (e){
+        e.preventDefault()
+        // 存储商品id和数量
+        // "shoppingArr"=>"[{'id':'tm1','num':2},{'id':'tm2','num':1}]"
+        var id = $(this).attr('data-id')//当前点击商品的id
+        var shoppingArr = []//购物车数据的数组
+        if (localStorage.getItem('shopping')) {
+            shoppingArr = JSON.parse( localStorage.getItem('shopping') )
+        }
+        // 标记购物车是否已有该商品
+        var flag = false
+        // 判断购物车是否已有该商品
+        $.each(shoppingArr,function (index,item){
+        if (item.id === id) {//购物车已该商品
+            item.num++//商品数量+1
+            flag = true
+        }
+        })
+        if (!flag) {
+        // push一个商品对象到shoppingArr
+        shoppingArr.push({"id":id,"num":1})
+        }
+        // 数据更新到本地存储
+        localStorage.setItem('shopping', JSON.stringify(shoppingArr) )
+        alert('加入购物车成功！')
+    })
+
  
 })
 

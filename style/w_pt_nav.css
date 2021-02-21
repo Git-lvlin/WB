@@ -78,6 +78,12 @@
     flex-direction: column;
     /* padding: 0 10px; */
 }
+.nav_left_menu.lt{
+    display: none;
+}
+.nav_left_menu.bk{
+    display: block;
+}
 .nav_left_menu>ul>li{
     cursor: pointer;
     height: 57.5px;
@@ -109,6 +115,7 @@
 	left: 202px;
     top: 0;
     z-index: 999;
+    display: none;
 }
 .sub_menu .col_box{
     width: 717px;
@@ -117,6 +124,7 @@
 }
 .col_1{
     width: 712px;
+    /* background: red; */
     /* height: 278px; */
     /* background: blue; */
 }
@@ -132,6 +140,7 @@
 }
 .col_1 ul{
     width: 712px;
+    /* height: 600px; */
     overflow-y: scroll;
     max-height: 278px;
     padding-left: 7px;
@@ -155,6 +164,7 @@
 }
 .col_1 ul li p{
     display: none;
+    color: #fff;
 }
 .col_1 ul li a{
     color: #fff;

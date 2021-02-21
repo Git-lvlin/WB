@@ -147,6 +147,17 @@
     width: 1200px;
     overflow: hidden;
 }
+.gnTabs_block{
+    width: 6000px;
+    /* overflow: hidden; */
+}
+.gnTabs_block .box_con{
+    display: none;
+    float: left;
+}
+.gnTabs_block .box_con.sbox{
+    display: block;
+}
 .gnTabs_cen{
     width: 392px;
     height: 280px;
@@ -315,13 +326,24 @@
     background-position: -302px -184px;
 }
 /* 排行榜结束 */
-/* .index_block_04{
-
-} */
+.index_block_04{
+    width: 1200px;
+    overflow: hidden;
+}
+.gnTabs_block2{
+    width: 6000px;
+    /* display: flex; */
+    overflow: hidden;
+}
 .brand_list{
     width: 1200px;
     /* height: 694px; */
     overflow: hidden;
+    display: none;
+    float: left;
+}
+.brand_list.lbox{
+    display: block;
 }
 .brand_list li{
     float: left;

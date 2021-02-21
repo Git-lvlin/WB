@@ -5,9 +5,9 @@
 let mode = process.argv[2] // 'start'  'build'
 switch(mode){
   case 'start':
-    require('./gulpfile-dev.js')
+    require('./gulpfile-dev.js')//开发
     break
   case 'build':
-    require('./gulpfile-build.js')
+    require('./gulpfile-build.js')//生产
     break
 }

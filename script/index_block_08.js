@@ -7,8 +7,8 @@ window.addEventListener('load',function(){
         success:function(json){
             var lk_obj='';
             json.forEach(function(item,index){
-                lk_obj+=`<a href="">
-                    <img src="${item.src}" alt="">
+                lk_obj+=`<a href="../views/Product _Details.html">
+                    <img src="${item.src}" alt="" data-id="${item.id}">
                     <p class="p1">${item.p1}</p>
                     <p class="p2">${item.p2}</p>
                     <div class="fenqi">
