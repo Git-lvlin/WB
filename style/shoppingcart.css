@@ -243,6 +243,9 @@
 .W_settle_floor ul .delete_goods{
     margin-left: 28px;
 }
+.W_settle_floor ul .delete_goods em{
+    cursor: pointer;
+}
 .W_settle_floor ul .move_in_collect{
     margin-left: 28px;
 }
