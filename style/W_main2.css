@@ -307,6 +307,9 @@
     position: relative;
     color: #666;
 }
+.upper_style a:hover{
+    border: 1px solid #333;
+}
 .upper_style a span{
     font-size: 12px;
     color: #333;
@@ -358,9 +361,10 @@
     margin-top: 24px;
    display: flex;
 }
-.upper_button .button_a{
+.upper_button .button_a a{
     width: 180px;
     height: 44px;
+    display: block;
     line-height: 44px;
     font-size: 14px;
     color: #fff;
@@ -370,6 +374,9 @@
     text-align: center;
     font-weight: 700;
     cursor: pointer;
+}
+.upper_button .button_a a{
+    color: #fff;
 }
 .upper_button .button_b{
     width: 120px;
@@ -381,6 +388,7 @@
     background-image: none;
     background-color: #fff;
     margin-left: 10px;
+    cursor: pointer;
 }
 .upper_button .qr-code{
     width: 60px;

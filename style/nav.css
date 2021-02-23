@@ -34,11 +34,18 @@
 .nav_bax>ul>li a{
 	color: #999;
 }
+.nav_bax>ul>li .spc{
+	color: #999;
+	cursor: pointer;
+}
 .nav_bax>ul>li:nth-of-type(2) a{
 	color: #ae0f17;
 }
-.nav_bax>ul>li .btn-login em i{
-	margin-right: 10px;
+.nav_bax>ul .btn-login p{
+	color: #999;
+}
+.nav_bax>ul .btn-login p span{
+	cursor: pointer;
 }
 
 /* 客服服务下拉列表 */

@@ -12,7 +12,6 @@ localStorage.setItem('userobj',JSON.stringify(box))
 //注册
 add.onclick = function (){
     var userobj=JSON.parse(localStorage.getItem('userobj'));
-    console.log(userobj)
     var userobjs={
           user:user.value,
           pass:pass.value

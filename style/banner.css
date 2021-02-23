@@ -17,7 +17,7 @@
 	position: absolute;
 	display: flex;
 	bottom: 19px;
-	left: 300px;
+	/* left: 300px; */
 	z-index: 10;
 }
 .banner_img .wrap .pic{
@@ -46,7 +46,7 @@
 .banner_img .wrap .ban_btn{
 	width: 900px;
 	height: 460px;
-	left:600px;
+	left:503px;
 	position: absolute;
 }
 .ban_btn .perv,.ban_btn .next{

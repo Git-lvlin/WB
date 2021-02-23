@@ -1,4 +1,5 @@
 window.addEventListener('load',function(){
+    // 排行榜选项卡切换
     var spa=$2('.gnTabs span');
     var box_con=$2('.gnTabs_block .box_con');
     var par=0;
@@ -31,4 +32,18 @@ window.addEventListener('load',function(){
 
         }
     }
+
+      // 点击存储商品id
+      $('#W_index_block').on('click','.wb',function (){
+        // 存储商品id
+        // "goods"=>"[{'id':'tm1'},{'id':'tm2'}]"
+        var id = $(this).attr('data-id')//当前点击商品的id
+        var goodsArr = []//购物车数据的数组
+          // push一个商品对象的id到goodsArr
+          goodsArr.push({"id":id,"price":88888,"s_go_name":"瑞士 爱宝时（EPOS）-Emotion情感系列 日夜无间 3390.302.20.38.25 机械男表"})
+
+        // 数据更新到本地存储
+        localStorage.setItem('goods', JSON.stringify(goodsArr) )
+        // alert('保存id成功！')
+      })
 })

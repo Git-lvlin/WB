@@ -96,7 +96,7 @@ for (var i = 0, len = nums.length; i < len; i++){
                             <p class="tPrc">
                                 <em>月付</em>
                                 <span class="fenqi_price">${item.fenqi_price}</span>
-                                <span class="s_price">${item.s_price}</span>
+                                <span class="s_price">￥<i>${item.s_price}</i></span>
                             </p>
                             <a href="" class="s_go_name elps2">
                             ${item.s_go_name}
@@ -127,9 +127,11 @@ for (var i = 0, len = nums.length; i < len; i++){
         // 存储商品id
         // "goods"=>"[{'id':'tm1'},{'id':'tm2'}]"
         var id = $(this).attr('data-id')//当前点击商品的id
+        var price=$(this).siblings('.goods_txt').children('.tPrc').children('.s_price').children('i').text();//当前点击商品的价格
+        var s_go_name=$(this).siblings('.goods_txt').children('.s_go_name').text();//当前点击商品的介绍
         var goodsArr = []//购物车数据的数组
           // push一个商品对象的id到goodsArr
-          goodsArr.push({"id":id})
+          goodsArr.push({"id":id,"price":price,"s_go_name":s_go_name})
 
         // 数据更新到本地存储
         localStorage.setItem('goods', JSON.stringify(goodsArr) )

@@ -49,7 +49,7 @@ window.addEventListener('load',function(){
                                         <input type="text" class="num" value="${obj.num}" data-stock="4"> 
                                         <button class="add">+</button>
                                     </li>
-                                    <li class="total_price">¥<em class="subTotal">${item.s_price*obj.num}</em></li>
+                                    <li class="total_price">¥<em class="subTotal">${item.s_price}</em></li>
                                     <li class="others"> 
                                         <a href="" class="delete_goods" data-id="${item.id}">删除</a>
                                         <a href="" class="to_collection">移入收藏</a>
@@ -65,6 +65,9 @@ window.addEventListener('load',function(){
                 
     // 删除商品
     $('.W_store_floor').on('click','.delete_goods',function (e){
+        var all=$1('#for');
+        var all2=$1('#glob');
+        var allQuantity=$1('#allQuantity');
         alert('删除成功')
         e.preventDefault()
         // 当前点击的商品id
@@ -72,56 +75,58 @@ window.addEventListener('load',function(){
 
          //删除之后判断剩余商品的总价格
         var pirc=parseInt($(this).parents('.others').prev('.total_price').children('em').text());
-        var sum=$('.settle_price i').html()-pirc;
-        $('.settle_price i').html(sum)
-
+        if($('.settle_price i').html()!=0){//总价等于零时就不减
+            var sum=$('.settle_price i').html()-pirc;
+            $('.settle_price i').html(sum)
+        }
+        
         $.each(shopping,function (index,item){
         if (item.id === id) {
             shopping.splice(index,1)
             return false
         }
         })
+         // 更新本地存储的数据
+         localStorage.setItem('shopping',JSON.stringify(shopping))
         
         // 删除dom结构
         $(this).parents('.W_store_floor').remove()
-        // 更新本地存储的数据
-        localStorage.setItem('shopping',JSON.stringify(shopping))
-        if (shopping.length <= 0) {
+        if (shopping.length<=0) {
         $('.W_settle_floor').hide()
         localStorage.removeItem('shopping')
         var newLi = '<p>购物车暂无数据！</p>'
         $('.cart-content').html(newLi)
+        allQuantity.innerHTML=0;
+        all.checked = false 
+        all2.checked=false
         }
-         // 判断是否需要全选
-         var checks = $2('.cart-content .fag')
-         var all=$1('#for');
-         var choose_num=$1('.choose_num em');
+        // 判断是否需要全选
+        var checks = $2('.cart-content .fag');
+        var choose_num=$1('.choose_num em');
          for (var i = 0, len = checks.length; i < len; i++){
              if (!checks[i].checked) {
                return
              }
             //删除之后的商品数量
              choose_num.innerHTML=i+1;
+             allQuantity.innerHTML=i+1;
+             all.checked = true//删除之后全部都勾选的全部就勾选
+             all2.checked=true
            }
-         all.checked = true//删除之后全部都勾选的全部都勾选
-
-        
-       
-
-
     })
 
     //减少商品数量
     $('.W_store_floor').on('click', '.reduce', function () {
         var aa = $(this).parents('.goods_num').siblings('.others').children('.delete_goods').attr("data-id");
-        // location.reload()//刷新页面
+        var pirc=parseInt($(this).parents('.goods_num').siblings('.unit_price').children('em').text());
+        var pircbox=$(this).parents('.goods_num').siblings('.total_price').children('em');
         var _this = this
         $.each(shopping, function (index, item) {
           if (item.id === aa) {
             var sum = item.num - 1
             $(_this).next().val(sum) //商品数量-1
             item.num = sum;
-            console.log(sum)
+            pircbox.html(sum*pirc)
             if (sum <= 1) { //判断小于1不可用
               $(_this).prop('disabled', 'disabled')
               console.log($(_this).prop('disabled', 'disabled'))
@@ -133,12 +138,15 @@ window.addEventListener('load',function(){
     //增加商品数量
     $('.W_store_floor').on('click', '.add', function () {
     var aa = $(this).parents('.goods_num').siblings('.others').children('.delete_goods').attr("data-id");
+    var pirc=parseInt($(this).parents('.goods_num').siblings('.unit_price').children('em').text());
+    var pircbox=$(this).parents('.goods_num').siblings('.total_price').children('em');
     var _this = this
     $.each(shopping, function (index, item) {
         if (item.id === aa) {
         var sum = item.num + 1
         $(_this).prev().val(sum) //商品数量+1
         item.num = sum;
+        pircbox.html(sum*pirc)
         if (sum > 1) { //判断大于1可用
             $(_this).siblings('.reduce').removeAttr('disabled')
         }
@@ -147,74 +155,105 @@ window.addEventListener('load',function(){
     localStorage.setItem('shopping',JSON.stringify(shopping))
     })
 
-       // 选中展示价格
-        var checks = $2('.cart-content .fag');
-        var sum=0;
+    // 选中展示价格
+    $('.cart-content').on('click','.fag',function(){
+    var sum=0;
+    var checks = $2('.cart-content .fag')
         $.each(checks,function(index,item){
-        item.onclick=function(){
-            // console.log(sum)
-        var pic=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
-        if($(item).prop('checked')){
-           sum+=pic 
-        $('.settle_price i').html(sum)
-        }else if(!$(item).prop('checked')){
-            var box=parseInt($('.settle_price i').html())
-            box-=pic
-          $('.settle_price i').html(box)
-        }
-       }
-       })
-    
-
-       // 点击勾选任务(事件委托)
-       var all=$1('#for');
-       $('.cart-content').on('click','.fag',function(){
-            // 判断是否需要全选
-            var checks = $2('.cart-content .fag')
-            var flag = 1
-            for (var i = 0, len = checks.length; i < len; i++){
-            if (!checks[i].checked) {
-                flag = 0
-            }
-            }
-            if (flag) {
-            all.checked = true
-            } else {
-            all.checked = false
+            if(item.checked){
+                console.log(item)
+                sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
             }
         })
+        $('.settle_price i').html(sum)
+    })
+
+    // 点击勾选任务(事件委托)
+    var all=$1('#for');
+    var all2=$1('#glob');
+    $('.cart-content').on('click','.fag',function(){
+        // 判断是否需要全选
+        var checks = $2('.cart-content .fag');
+        var flag = 1
+        for (var i = 0, len = checks.length; i < len; i++){
+        if (!checks[i].checked) {
+            flag = 0
+        }
+        }
+        if (flag) {
+        all.checked = true
+        all2.checked=true
+        } else {
+        all.checked = false
+        all2.checked=false
+        }
+    })
   
 
-      //全选
-      all.onclick=function(){
-      var checks2 = $2('.cart-content #fag');
-      var checks = $2('.cart-content .fag');
-      var choose_num=$1('.choose_num em');
-        var num=0;
-        var pics=0;
-        if (all.checked) {
-            for (var i = 0, len = checks.length; i < len; i++){
-                var pic=parseInt($(checks[i]).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
-                pics+=pic
-              checks[i].checked = true
-              checks2[i].checked=true
-              num+=1
-              
-              $('.settle_price i').html(pics)//全部价格
-              choose_num.innerHTML=num;//已选数量
-            }
+    //全选
+    all.onclick=function(){
+    var checks2 = $2('.cart-content #fag');
+    var checks = $2('.cart-content .fag');
+    var choose_num=$1('.choose_num em');
+    var num=0;
+    var pics=0;
+    if (all.checked) {
+        for (var i = 0, len = checks.length; i < len; i++){
+            var pic=parseInt($(checks[i]).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+            pics+=pic
+            checks[i].checked = true
+            checks2[i].checked=true
+            num+=1
             
-        }else{
-            for (var i = 0, len = checks.length; i < len; i++){
-                checks[i].checked = false
-                checks2[i].checked=false
-                choose_num.innerHTML=0;
-              }
-              sum=0;//把已经累积的变量清零
-              //全选不选价格清零
-              $('.settle_price i').html(0)
+            $('.settle_price i').html(pics)//全部价格
+            choose_num.innerHTML=num;//已选数量
         }
-      }
+        all2.checked = true
+        
+    }else{
+        for (var i = 0, len = checks.length; i < len; i++){
+            checks[i].checked = false
+            checks2[i].checked=false
+            choose_num.innerHTML=0;
+            }
+            sum=0;//把已经累积的变量清零
+            //全选不选价格清零
+            $('.settle_price i').html(0)
+            all2.checked=false
+    }
+    }
+
+    //全选2
+    all2.onclick=function(){
+        var checks2 = $2('.cart-content #fag');
+        var checks = $2('.cart-content .fag');
+        var choose_num=$1('.choose_num em');
+            var num=0;
+            var pics=0;
+            if (all2.checked) {
+                for (var i = 0, len = checks.length; i < len; i++){
+                    var pic=parseInt($(checks[i]).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+                    pics+=pic
+                checks[i].checked = true
+                checks2[i].checked=true
+                num+=1
+                
+                $('.settle_price i').html(pics)//全部价格
+                choose_num.innerHTML=num;//已选数量
+                }
+                all.checked = true
+            }else{
+                for (var i = 0, len = checks.length; i < len; i++){
+                    checks[i].checked = false
+                    checks2[i].checked=false
+                    choose_num.innerHTML=0;
+                }
+                sum=0;//把已经累积的变量清零
+                //全选不选价格清零
+                $('.settle_price i').html(0)
+                all.checked = false
+            }
+    }
 
       //判断选了多少个
     $('.cart-content').on('click','.fag',function(){
@@ -234,23 +273,32 @@ window.addEventListener('load',function(){
         choose_num.innerHTML=chek;
     })
     //选择旗舰店商品也跟着选择
-    $('.cart-content').on('click','#fag',function(){
-        var checks = $2('.cart-content .fag');
-        var checks2 = $2('.cart-content #fag');
-        for (let i = 0, len = checks2.length; i < len; i++){
-            if(checks2[i].checked){
-            checks[i].checked=true;
-          }else{
-            checks[i].checked=false;
-          }
-        }
-    })
+    // $('.cart-content').on('click','#fag',function(){
+        
+    //     var checks = $2('.cart-content .fag');
+    //     var checks2 = $2('.cart-content #fag');
+    //     for (let i = 0, len = checks2.length; i < len; i++){
+    //         if(checks2[i].checked){
+    //         checks[i].checked=true;
+    //         var sum=0;
+    //         $.each(checks,function(index,item){
+    //             if(item.checked){
+    //                 sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+    //             }
+    //         })
+    //         $('.settle_price i').html(sum)
+    //       }else{
+    //         checks[i].checked=false;
+    //       }
+    //     }
+    // })
 
      
 
       // 批量删除
       var dele=$1('.delete_goods em');
       dele.onclick = function (){
+        var choose_num=$1('.choose_num em');  
         var checks = $2('.cart-content .fag')
         for (var i = 0, len = checks.length; i < len; i++){
           if (checks[i].checked) {
@@ -267,6 +315,12 @@ window.addEventListener('load',function(){
            
           }
         }
+        //删除选中的之后价格清零
+        $('.settle_price i').html(0)
+        //更新选中的商品数量
+        choose_num.innerHTML=0;
+        //全选2不选
+        all2.checked=false;
           // 更新本地存储的数据
           localStorage.setItem('shopping',JSON.stringify(shopping))
           if (shopping.length <= 0) {

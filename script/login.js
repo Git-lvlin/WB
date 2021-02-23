@@ -10,18 +10,23 @@ window.addEventListener('load',function(){
         alert('请先注册')
         return false
     }
- 
 
+     // 如果登录过就获取账号密码
+    //  if(localStorage.getItem('login')){
     //获取账号密码
     if (JSON.parse(localStorage.getItem('userobj')).length>=2) {
-        user.value = JSON.parse(localStorage.getItem('userobj'))[JSON.parse(localStorage.getItem('userobj')).length-1].user;
-        pass.value = JSON.parse(localStorage.getItem('userobj'))[JSON.parse(localStorage.getItem('userobj')).length-1].pass;
+      user.value = JSON.parse(localStorage.getItem('userobj'))[JSON.parse(localStorage.getItem('userobj')).length-1].user;
+      pass.value = JSON.parse(localStorage.getItem('userobj'))[JSON.parse(localStorage.getItem('userobj')).length-1].pass;
 
-        rem.checked = true
-      } else {
-        user.value = ''
-        pass.value = ''
-      }
+      rem.checked = true
+    } else {
+      user.value = ''
+      pass.value = ''
+    }
+  // }
+ 
+
+
     //立即登录
     login.onclick = function (){
        //获取已经注册的账号密码
@@ -47,7 +52,7 @@ window.addEventListener('load',function(){
           else {
             if(JSON.parse(localStorage.getItem('userobj')).length>=3){
                // 删除账号密码数据
-              exist.splice(0,2)
+              exist.splice(0,JSON.parse(localStorage.getItem('userobj')).length-1)
               localStorage.setItem('userobj',JSON.stringify(exist))
             }else if(JSON.parse(localStorage.getItem('userobj')).length>=2){
                // 删除账号密码数据

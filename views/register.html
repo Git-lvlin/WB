@@ -17,12 +17,14 @@
             </div>
             <div class="register">
                 <div class="content_login">
-                    <h1>注册万表会员</h1>
-                    <p>账号：<input type="text" class="user"></p>
-                    <p>密码：<input type="text" class="pass"></p>
-                    <p>
-                        <button class="add">注册</button>
-                    </p>
+                    <form action="http://127.0.0.1:5500/views/index.html">
+                        <h1>注册万表会员</h1>
+                        <p>账号：<input type="tel" class="user" placeholder="手机号码" pattern="[0-9]{11}"></p>
+                        <p>密码：<input type="text" class="pass" placeholder="" pattern="^\w+$"></p>
+                        <p>
+                            <input type="submit" class="add" value="注册">
+                        </p>
+                    </form>
                 </div>
             </div>
     </div>
