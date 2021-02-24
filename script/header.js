@@ -9,13 +9,14 @@ window.addEventListener('load',function(){
         for(var i=0;i<exist.length;i++){
         btnlogin.innerHTML=`<p><i>${exist[i].user}</i><span class="drop_out">退出</span></p>`;
         }
+        var drop_out=$1('.drop_out');
+        //退出
+        drop_out.onclick=function(){
+            localStorage.removeItem('login');
+            location.reload()//刷新页面
+        }
    }
-   var drop_out=$1('.drop_out');
-   //退出
-   drop_out.onclick=function(){
-       localStorage.removeItem('login');
-       location.reload()//刷新页面
-   }
+ 
     // 客户服务
     mobile.onclick=function(){
         if(localStorage.getItem('login')){

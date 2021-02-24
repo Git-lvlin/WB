@@ -615,5 +615,88 @@
     color: #e65c5c;
     font-weight: 700;
 }
-
+/* 返回顶部 */
+.panel_bottom{
+    position: fixed;
+    bottom: 55px;
+    right: 0;
+    width: 44px;
+    height: 220px;
+    box-shadow: 0 0 8px 1px rgba(0,0,0,.1);;
+    display: flex;
+    flex-direction: column;
+}
+.panel_bottom a{
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: relative;
+}
+.panel_bottom a i{
+    position: absolute;
+    background-image: url(../images/a.png);
+    top: 10px;
+    left: 10px;
+    width: 24px;
+    height: 24px;
+}
+.panel_bottom a span{
+    display: block;
+    width: 76px;
+    height: 44px;
+    line-height: 44px;
+    color: #333;
+    font-size: 12px;
+    background: #f1f1f1;
+    text-align: right;
+    padding-right: 6px;
+    position: absolute;
+    right: -84px;
+    bottom: 0;
+    z-index: 2;
+    transition: .5s;
+}
+.panel_bottom a:hover span{
+    right: 44px;
+}
+.w_cart i{
+    background-position: -507px -382px;
+    background-size: 589px;
+}
+.w_keep i{
+    background-position: -507px -246px;
+    background-size: 589px;
+}
+.w_footprints i{
+    background-position: -469px -360px;
+    background-size: 589px;
+}
+.w_download_app i{
+    background-position: -373px -462px;
+    background-size: 589px;
+}
+.w_download_app .w_tool_txt{
+    width: 180px;
+    background: #f1f1f1;
+    padding: 18px 10px 15px 10px;
+    position: absolute;
+    right: 35px;
+    bottom: -44px;
+    height: auto;
+    opacity: 0;
+    transition: .5s;
+}
+.w_download_app .w_tool_txt p{
+    color: #333;
+    margin-top: 10px;
+    line-height: 18px;
+    text-align: center;
+}
+.w_download_app:hover .w_tool_txt{
+    opacity: 1;
+}
+.w_to_top i{
+    background-position: -507px -178px;
+    background-size: 589px;
+}
 

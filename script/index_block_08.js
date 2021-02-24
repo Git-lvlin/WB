@@ -21,4 +21,10 @@ window.addEventListener('load',function(){
             guess_lk_s.innerHTML=lk_obj;
         }
     })
+
+    //返回顶部
+    var fanto=$1('.w_to_top');
+    fanto.onclick=function(){
+        animate(document.documentElement,{'scrollTop':0})
+    }
 })

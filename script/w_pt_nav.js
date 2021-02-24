@@ -44,6 +44,7 @@ window.addEventListener('load',function(){
         }
     })
     
+    //隐藏显示菜单栏
     var iconall=$1('.allx');
     var menu=$1('.nav_left_menu');
     var fag=0;
@@ -57,5 +58,17 @@ window.addEventListener('load',function(){
             fag=!fag
         }
     }
-   
+
+    //悬浮nav
+    window.onscroll=function(){
+    var W_pt_nav=$1('#W_pt_nav');
+    if(document.body.scrollTop > 280 || document.documentElement.scrollTop > 280){
+        W_pt_nav.className='fix';
+        menu.className='nav_left_menu lt';
+    }else{
+        W_pt_nav.className='';
+        menu.className='nav_left_menu bk';
+    }
+    }
+
 })
