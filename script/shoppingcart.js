@@ -49,7 +49,7 @@ window.addEventListener('load',function(){
                                         <input type="text" class="num" value="${obj.num}" data-stock="4"> 
                                         <button class="add">+</button>
                                     </li>
-                                    <li class="total_price">¥<em class="subTotal">${item.s_price}</em></li>
+                                    <li class="total_price">¥<em class="subTotal">${item.s_price*obj.num}</em></li>
                                     <li class="others"> 
                                         <a href="" class="delete_goods" data-id="${item.id}">删除</a>
                                         <a href="" class="to_collection">移入收藏</a>
@@ -133,6 +133,15 @@ window.addEventListener('load',function(){
             }
           }
         })
+        var amount=0;
+        var checks = $2('.cart-content .fag')
+            $.each(checks,function(index,item){
+                if(item.checked){
+                    console.log(item)
+                    amount+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+                }
+            })
+        $('.settle_price i').html(amount)
         localStorage.setItem('shopping',JSON.stringify(shopping))
       })
     //增加商品数量
@@ -152,6 +161,15 @@ window.addEventListener('load',function(){
         }
         }
     })
+    var amount=0;
+    var checks = $2('.cart-content .fag')
+        $.each(checks,function(index,item){
+            if(item.checked){
+                console.log(item)
+                amount+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+            }
+        })
+    $('.settle_price i').html(amount)
     localStorage.setItem('shopping',JSON.stringify(shopping))
     })
 
@@ -273,25 +291,46 @@ window.addEventListener('load',function(){
         choose_num.innerHTML=chek;
     })
     //选择旗舰店商品也跟着选择
-    // $('.cart-content').on('click','#fag',function(){
+    $('.cart-content').on('click','#fag',function(){
         
-    //     var checks = $2('.cart-content .fag');
-    //     var checks2 = $2('.cart-content #fag');
-    //     for (let i = 0, len = checks2.length; i < len; i++){
-    //         if(checks2[i].checked){
-    //         checks[i].checked=true;
-    //         var sum=0;
-    //         $.each(checks,function(index,item){
-    //             if(item.checked){
-    //                 sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
-    //             }
-    //         })
-    //         $('.settle_price i').html(sum)
-    //       }else{
-    //         checks[i].checked=false;
-    //       }
-    //     }
-    // })
+        var checks = $2('.cart-content .fag');
+        var checks2 = $2('.cart-content #fag');
+        for (let i = 0, len = checks2.length; i < len; i++){
+            if(checks2[i].checked){
+            checks[i].checked=true;
+            var sum=0;
+            $.each(checks,function(index,item){
+                if(item.checked){
+                    sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+                }
+            })
+            $('.settle_price i').html(sum)
+      
+          }else{
+            checks[i].checked=false;
+            var sum=0;
+            $.each(checks,function(index,item){
+                if(item.checked){
+                    sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
+                }
+            })
+            $('.settle_price i').html(sum)
+          }
+        }
+        // 判断是否需要全选
+        var choose_num=$1('.choose_num em');
+        for (var i = 0, len = checks.length; i < len; i++){
+            if (!checks[i].checked) {
+            all.checked = false
+            all2.checked=false
+            return
+            }
+            choose_num.innerHTML=i+1;
+            console.log(choose_num.innerHTML)
+            all.checked = true//删除之后全部都勾选的全部就勾选
+            all2.checked=true
+        }
+    })
 
      
 
