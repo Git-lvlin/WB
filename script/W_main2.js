@@ -23,6 +23,7 @@ window.addEventListener('load',function(){
                         <div class="maxBox">
                             <img src="${json[index].maxsrc[0]}" alt="">
                         </div>
+                        <div class="minbox">
                         <div class="minlist">
                             <ul class="list">
                                     <li><img src="${json[index].minsrc[0]}" alt=""></li>
@@ -31,6 +32,13 @@ window.addEventListener('load',function(){
                                     <li><img src="${json[index].minsrc[3]}" alt=""></li>
                                     <li><img src="${json[index].minsrc[4]}" alt=""></li>
                             </ul>
+                       </div>
+                       <span class="lt">
+                            <
+                        </span>
+                        <span class="ri">
+                            >
+                        </span> 
                        </div>
                        </div>
                        <div class="upper_right fl">
@@ -112,6 +120,16 @@ window.addEventListener('load',function(){
                        `
                        W_detail.innerHTML=pd_obj;
 
+                       //小图滚动条
+                       var minlist=$1('.minlist');
+                       var lt=$1('.lt');
+                       var ri=$1('.ri');
+                       lt.onclick=function(){
+                        minlist.scrollLeft=0;
+                       }
+                       ri.onclick=function(){
+                        minlist.scrollLeft=150;
+                       }
 
                        //放大镜
                        var left = $1('.upper_left .left')
@@ -128,7 +146,7 @@ window.addEventListener('load',function(){
                                imgsrc.src=arr[i];
                                maxImg.src=arr2[i];
                                lit[par].style.border="1px solid transparent";
-                               lit[i].style.border="1px solid red";
+                               lit[i].style.border="1px solid #666";
                                par=i;
                            }
                        }

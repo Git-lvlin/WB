@@ -129,7 +129,6 @@ window.addEventListener('load',function(){
             pircbox.html(sum*pirc)
             if (sum <= 1) { //判断小于1不可用
               $(_this).prop('disabled', 'disabled')
-              console.log($(_this).prop('disabled', 'disabled'))
             }
           }
         })
@@ -179,7 +178,6 @@ window.addEventListener('load',function(){
     var checks = $2('.cart-content .fag')
         $.each(checks,function(index,item){
             if(item.checked){
-                console.log(item)
                 sum+=parseInt($(item).siblings('.goods_info').children('ul').children('.total_price').children('em').text());
             }
         })
@@ -326,13 +324,10 @@ window.addEventListener('load',function(){
             return
             }
             choose_num.innerHTML=i+1;
-            console.log(choose_num.innerHTML)
             all.checked = true//删除之后全部都勾选的全部就勾选
             all2.checked=true
         }
     })
-
-     
 
       // 批量删除
       var dele=$1('.delete_goods em');

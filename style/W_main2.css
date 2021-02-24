@@ -62,7 +62,31 @@
 .upper_left .minlist{
     width: 500px;
     height: 100px;
-    overflow-x:scroll;
+    margin-top: 30px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.upper_left .minbox{
+    width: 500px;
+    height: 100px;
+    position: relative;
+}
+.upper_left .minbox .lt,.upper_left .minbox .ri{
+    width: 20px;
+    display: block;
+    position: absolute;
+    margin-top: 29px;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 25px; 
+    font-weight: 700; 
+    top: -15px;  
+}
+.upper_left .minbox .lt{
+    left: 0;
+}
+.upper_left .minbox .ri{
+    right: -15px;
 }
 .upper_left ul{
     width: 600px;
